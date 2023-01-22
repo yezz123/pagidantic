@@ -1,7 +1,7 @@
 import pytest
+from conftest import dict_to_list
 
 from pagidantic import PagidanticDict, PagidanticSet
-from tests.conftest import dict_to_list
 
 
 class TestPaginatorDictProxy:
