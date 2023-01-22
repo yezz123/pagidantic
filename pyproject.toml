@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "pagidantic"
 description = "Pagination using Pydantic. Easy to use, lightweight, and easy to integrate with existing projects."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = "MIT"
 authors = [
     { name = "Yasser Tahiri", email = "hello@yezz.me" },
@@ -17,8 +17,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
