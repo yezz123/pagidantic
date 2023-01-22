@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "pagidantic"
 description = "Pagination using Pydantic. Easy to use, lightweight, and easy to integrate with existing projects."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 license = "MIT"
 authors = [
     { name = "Yasser Tahiri", email = "hello@yezz.me" },
@@ -17,8 +17,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -48,7 +46,6 @@ test = [
     "pytest-asyncio == 0.20.3",
     "codecov==2.1.12",
     "pytest-cov==4.0.0",
-    "python-decouple",
 ]
 
 
@@ -90,6 +87,11 @@ disallow_any_generics = true
 check_untyped_defs = true
 ignore_missing_imports = true
 disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "pagidantic.tests.*"
+ignore_missing_imports = true
+check_untyped_defs = true
 
 [tool.coverage.report]
 precision = 2
