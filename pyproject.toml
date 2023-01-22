@@ -90,6 +90,11 @@ check_untyped_defs = true
 ignore_missing_imports = true
 disallow_untyped_defs = true
 
+[[tool.mypy.overrides]]
+module = "pagidantic.tests.*"
+ignore_missing_imports = true
+check_untyped_defs = true
+
 [tool.coverage.report]
 precision = 2
 exclude_lines = [
