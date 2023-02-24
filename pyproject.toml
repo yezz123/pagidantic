@@ -38,8 +38,8 @@ Funding = 'https://github.com/sponsors/yezz123'
 
 [project.optional-dependencies]
 lint = [
+    "mypy==1.0.1",
     "pre-commit==3.1.0",
-    "mypy==0.991",
 ]
 test = [
     "pytest==7.2.1",
