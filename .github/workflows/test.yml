@@ -38,3 +38,5 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         uses: codecov/codecov-action@v3
+      - name: Test Simple Example
+        run: bash scripts/example.sh

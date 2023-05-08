@@ -7,7 +7,9 @@ class Page:
     the paginator instance.
     """
 
-    def __init__(self, object_list: Sequence, page_number: int, paginator):
+    def __init__(
+        self, object_list: Sequence[object], page_number: int, paginator: object
+    ):
         """
         Initialize a Page object with a list of objects, the current page number, and a paginator instance.
 
@@ -29,7 +31,7 @@ class Page:
         :return: True if the paginator has a next page, False otherwise.
         :rtype: bool
         """
-        return self.page_number < self.paginator.total_pages
+        return self.page_number < self.paginator.total_pages  # type: ignore
 
     def has_previous(self) -> bool:
         """
@@ -41,7 +43,7 @@ class Page:
         return self.page_number > 0
 
     @property
-    def count(self):
+    def count(self) -> int:
         """
         Return a number of page objects.
 

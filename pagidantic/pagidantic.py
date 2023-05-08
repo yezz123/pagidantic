@@ -1,14 +1,19 @@
-from typing import Type, Union
+from typing import Any, List, Set, Tuple, Type, Union
 
 from pagidantic.factory import PagidanticFactory
 from pagidantic.paginator import Paginator
 
 
 def pagidantic(
-    object_list: Union[list, tuple, dict, set],
+    object_list: Union[
+        list[List[Any]],
+        tuple[Tuple[Any]],
+        dict[Any, Any],
+        set[Set[Any]],
+    ],
     page_limit: int = 10,
     start_page: int = 0,
-):
+) -> Paginator:
     """
     This function create a paginator instance based on the type of the object list passed
 
@@ -21,7 +26,7 @@ def pagidantic(
     :return: paginator instance
     :rtype: Paginator
     """
-    factory = PagidanticFactory(type(object_list).__name__)
+    factory = PagidanticFactory(objects_type=type(object_list).__name__)
     paginator: Type[Paginator] = factory.get_paginator()
     return paginator(
         object_list=object_list,
