@@ -1,3 +1,5 @@
+from typing import Any, List
+
 from pagidantic.paginator import Paginator
 
 
@@ -13,7 +15,9 @@ class PagidanticSet(Paginator):
     :type start_page: int, optional
     """
 
-    def __init__(self, object_list: set, page_limit: int = 10, start_page: int = 0):
+    def __init__(
+        self, object_list: List[Any], page_limit: int = 10, start_page: int = 0
+    ):
         self.object_list = object_list
         super().__init__(
             object_list=self._set_to_list(),
@@ -21,7 +25,7 @@ class PagidanticSet(Paginator):
             start_page=start_page,
         )
 
-    def _set_to_list(self) -> list[set]:
+    def _set_to_list(self) -> List[Any]:
         """Transform set to list of sets."""
         if not isinstance(self.object_list, set):
             raise TypeError(f"Expected set object, not {type(self.object_list)}")
