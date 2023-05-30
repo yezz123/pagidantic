@@ -24,6 +24,9 @@ jobs:
       - uses: pre-commit/action@v3.0.0
         with:
           extra_args: --all-files --verbose
+      - name: check Static Analysis
+        run: bash scripts/lint.sh
+
   test:
     name: test on python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
