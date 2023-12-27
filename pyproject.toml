@@ -29,7 +29,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "typing-extensions >=3.7.4,<4.9.0",
+    "typing-extensions >=3.7.4,<4.10.0",
     "pydantic >=1.6.2,!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0",
 ]
 
@@ -41,8 +41,8 @@ Funding = 'https://github.com/sponsors/yezz123'
 
 [project.optional-dependencies]
 lint = [
-    "mypy==1.7.0",
     "pre-commit==3.6.0",
+    "mypy==1.8.0",
 ]
 test = [
     "pytest-asyncio == 0.23.2",
