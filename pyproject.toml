@@ -45,7 +45,7 @@ lint = [
     "mypy==1.8.0",
 ]
 test = [
-    "pytest-asyncio == 0.23.2",
+    "pytest-asyncio == 0.23.3",
     "pytest==7.4.3",
     "pytest-cov==4.1.0",
 ]
