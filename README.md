@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/yezz123/pagidantic/actions/workflows/test.yml" target="_blank">
-    <img src="https://github.com/yezz123/pagidantic/actions/workflows/test.yml/badge.svg" alt="Test">
+<a href="https://github.com/yezz123/pagidantic/actions/workflows/ci.yml" target="_blank">
+    <img src="https://github.com/yezz123/pagidantic/actions/workflows/ci.yml/badge.svg" alt="Continuous Integration">
 </a>
 <a href="https://codecov.io/gh/yezz123/pagidantic">
     <img src="https://codecov.io/gh/yezz123/pagidantic/branch/main/graph/badge.svg"/>
@@ -17,6 +17,9 @@
 <a href="https://pypi.org/project/pagidantic" target="_blank">
     <img src="https://img.shields.io/pypi/pyversions/pagidantic.svg?color=%2334D058" alt="Supported Python versions">
 </a>
+<a href="https://pydantic.dev" target="_blank">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json" alt="Pydantic v2">
+</a>
 </p>
 
 ## Requirements
@@ -24,6 +27,8 @@
 A recent and currently supported version of Python (right now, <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python supports versions 3.9 and above</a>).
 
 As **Pagidantic** is based on **Pydantic**, it requires them. They will be automatically installed when you install **Pagidantic**.
+
+**Notes**: we support only Pydantic v2. If you are using Pydantic v1, you can install it using `pip install pagidantic==1.1.0`
 
 ## Installation
 
@@ -107,12 +112,6 @@ You can run all the tests with:
 bash scripts/test.sh
 ```
 
-> Note: You can also generate a coverage report with:
-
-```bash
-bash scripts/test_html.sh
-```
-
 ### Format the code 🍂
 
 Execute the following command to apply `pre-commit` formatting:
@@ -126,8 +125,6 @@ Execute the following command to apply `mypy` type checking:
 ```bash
 bash scripts/lint.sh
 ```
-
-**NOTE**: We need to Fix more than 90+ errors in the codebase. If you want to contribute, please fix the errors and send a PR.
 
 ## License
 
