@@ -6,4 +6,4 @@ set -x
 echo "ENV=${ENV}"
 
 export PYTHONPATH=.
-pytest --cov=pagidantic --cov=tests --cov-report=term-missing --cov-fail-under=80
+pytest --cov=pagidantic --cov-report=term-missing --cov-fail-under=80
