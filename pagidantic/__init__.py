@@ -7,7 +7,7 @@ It helps in creating efficient pagination solution with minimal code, while main
 """
 
 
-__version__ = "1.1.0"
+__version__ = "2.0.0"
 
 from pagidantic.dict import PagidanticDict
 from pagidantic.factory import PagidanticFactory
