@@ -10,6 +10,7 @@ with open("tests/example/generated.json") as f:
 
 pagination = pagidantic(object_list, page_limit=2, start_page=0)
 
+
 # get current returned page
 def get_current_page():
     return pagination.response
@@ -25,12 +26,14 @@ def get_next_page():
 
 print(get_next_page())
 
+
 # get previous page
 def get_previous_page():
     return pagination.get_previous()
 
 
 print(get_previous_page())
+
 
 # get page by number
 def get_page_by_number():
@@ -39,12 +42,14 @@ def get_page_by_number():
 
 print(get_page_by_number())
 
+
 # get total pages
 def get_total_pages():
     return pagination.total_pages
 
 
 print(get_total_pages())
+
 
 # Count total objects
 def count_total_objects():

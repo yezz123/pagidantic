@@ -27,7 +27,7 @@ class Paginator:
     page_limit: int = 10
     start_page: int = 0
 
-    def __post_init_post_parse__(self) -> None:
+    def __post_init__(self) -> None:
         """Executed after initial validation. Set initial page."""
         self.page: Page = self._page(
             object_list=self.get_objects(self.start_page),
