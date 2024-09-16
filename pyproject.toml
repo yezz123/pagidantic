@@ -30,7 +30,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "pydantic>=2.8.2,<2.8.3",
+    "pydantic>=2.8.2,<2.9.2",
 ]
 
 dynamic = ["version"]
@@ -42,12 +42,12 @@ Funding = 'https://github.com/sponsors/yezz123'
 [project.optional-dependencies]
 lint = [
     "pre-commit==3.8.0",
-    "mypy==1.11.1",
-    "ruff==0.5.7",
+    "mypy==1.11.2",
+    "ruff==0.6.5",
 ]
 test = [
-    "pytest-asyncio == 0.23.8",
-    "pytest==8.3.2",
+    "pytest-asyncio == 0.24.0",
+    "pytest==8.3.3",
     "pytest-cov==5.0.0",
 ]
 
